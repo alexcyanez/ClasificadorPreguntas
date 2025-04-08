@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  clasificador:
+    image: image-clasificador
+    build: .
+    container_name: clasificador-app
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./:/app
